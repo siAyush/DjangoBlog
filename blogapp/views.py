@@ -7,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 class PostListView(ListView):
     model = Post
-    template_name = 'blogapp/home.html'  # <app>/<model>_<viewtype>.html
+    template_name = 'blogapp/home.html'
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 5
@@ -15,7 +15,7 @@ class PostListView(ListView):
 
 class UserPostListView(ListView):
     model = Post
-    template_name = 'blogapp/user_posts.html'  # <app>/<model>_<viewtype>.html
+    template_name = 'blogapp/user_posts.html'
     context_object_name = 'posts'
     paginate_by = 5
 
